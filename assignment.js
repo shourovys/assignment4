@@ -1,9 +1,10 @@
 function feetToMile(feet = 0) {
-    if (typeof feet !== 'number' && feet < 0) {
+    if (typeof feet === 'number' && !(feet <= 0)) {     
+      const mile = feet / 5280
+      return mile
+    } 
+    else {
         return 'please pass a valid value'
-    } else {
-        const mile = feet / 5280
-        return mile
     }
 }
 const result1 = feetToMile(1)
