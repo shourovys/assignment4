@@ -31,7 +31,7 @@ console.log(result2);
 
 
 function brickCalculator(floor) {
-    if (typeof floor === 'number' && !(floor < 0)) {
+    if (typeof floor === 'number' && !(floor <= 0)) {
         const brickForFeet = 1000
         let brickNeeded = 1
         for (let i = 1; i <= floor; i++) {
