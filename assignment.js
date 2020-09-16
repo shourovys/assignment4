@@ -34,25 +34,27 @@ console.log(result2);
 function brickCalculator(floor) {
     if (typeof floor === 'number' && !(floor <= 0)) {
         const brickForFeet = 1000
-        let brickNeeded = 1
+        let brickNeededFor1st10 = 0
+        let brickNeeded2nd10 = 0
+        let brickNeeded3rd = 0
         for (let i = 1; i <= floor; i++) {
-            if (1 <= 10) {
-                brickNeeded = i * 15 * brickForFeet
+            if (i <= 10) {
+                brickNeededFor1st10 = i * 15 * brickForFeet
             }
             else if (i <= 20) {
-                brickNeeded = i * 12 * brickForFeet
+                brickNeeded2nd10 = i * 12 * brickForFeet
             }
             else {
-                brickNeeded = i * 10 * brickForFeet
+                brickNeeded3rd = i * 10 * brickForFeet
             }
         }
-        return brickNeeded
+        return (brickNeededFor1st10+brickNeeded2nd10+ brickNeeded3rd)
     }
     else {
         return 'please pass a valid value'
     }
 }
-const result3 = brickCalculator(10)
+const result3 = brickCalculator(19)
 console.log(result3);
 
 
